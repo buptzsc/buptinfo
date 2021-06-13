@@ -1,0 +1,67 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/search/search",
+    "pages/explore/explore",
+    "pages/profile/profile",
+    "pages/detail/detail",
+    "pages/profile/account/account",
+    "pages/profile/subscribe/subscribe",
+    "pages/profile/collection/collection",
+    "pages/profile/about/about",
+    "pages/profile/lab/lab",
+    "pages/profile/login/login",
+    "pages/profile/register/register",
+    "pages/explore/gym/gym",
+    "pages/explore/nav/nav",
+    "pages/explore/num/num",
+    "pages/search/result/result"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于校园导航功能"
+    }
+  },
+  "window": {
+    "navigationStyle": "custom"
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "tabBar": {
+    "selectedColor": "#84BD54",
+    "color": "#333",
+    "backgroundColor": "#eee",
+    "borderStyle": "white",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "订阅",
+        "iconPath": "images/icons/index.png",
+        "selectedIconPath": "images/icons/index-selected.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "搜索",
+        "iconPath": "images/icons/search.png",
+        "selectedIconPath": "images/icons/search-selected.png"
+      },
+      {
+        "pagePath": "pages/explore/explore",
+        "text": "发现",
+        "iconPath": "images/icons/explore.png",
+        "selectedIconPath": "images/icons/explore-selected.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "images/icons/profile.png",
+        "selectedIconPath": "images/icons/profile-selected.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

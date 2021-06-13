@@ -1,0 +1,1 @@
+<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/cjkz2329.jpg" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">实验室</view></cu-custom>

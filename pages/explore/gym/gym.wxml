@@ -1,0 +1,38 @@
+<cu-custom bgColor="bg-red" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">健身房预约情况</view></cu-custom>
+
+<view wx:for="{{reserveInfo}}" wx:for-item="item" wx:key="key">
+  <view class="cu-bar bg-white solid-bottom">
+    <view class="action">
+      <text class="cuIcon-title text-blue"></text>{{item.date}} {{item.capacity}}
+    </view>
+  </view>
+  <view class="padding bg-white">
+    <view class="flex margin-top">
+      <text class="margin-left">18:40-19:40</text>
+      <view class="cu-progress round">
+        <view class="bg-{{item.capacity1=='70/70'?'red':'green'}}" style="width:{{loading?item.percent1:''}};"></view>
+      </view>
+      <text class="margin-left">{{item.capacity1}}</text>
+    </view>
+    <view class="flex margin-top">
+      <text class="margin-left">19:40-20:40</text>
+      <view class="cu-progress round">
+        <view class="bg-{{item.capacity2=='70/70'?'red':'green'}}" style="width:{{loading?item.percent2:''}};"></view>
+      </view>
+      <text class="margin-left">{{item.capacity2}}</text>
+    </view>
+    <view class="flex margin-top">
+      <text class="margin-left">20:40-21:40</text>
+      <view class="cu-progress round">
+        <view class="bg-{{item.capacity3=='70/70'?'red':'green'}}" style="width:{{loading?item.percent3:''}};"></view>
+      </view>
+      <text class="margin-left">{{item.capacity3}}</text>
+    </view>
+  </view>
+</view>
+
+<text></text>
+
+<view class="solid-bottom text-df padding">
+  <text class="text-gray" catchtap="copyurl" data-URL="https://gym.byr.moe/login.php">点击复制链接进行预约</text>
+</view>

@@ -1,0 +1,7 @@
+{
+  "navigationStyle": "default",
+  "navigationBarTitleText": "我订阅的内容",
+  "navigationBarBackgroundColor": "#7acfa6",
+  "enablePullDownRefresh": true,
+  "disableScroll": false
+}

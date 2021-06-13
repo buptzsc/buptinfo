@@ -1,0 +1,20 @@
+<template name="postItem">
+    <view class="post-container" hover-class="hover-style">
+       <view class="post-author-date">
+          <image class="post-author" src="/images/post_options/mybupt.png"></image>
+          <text class="post-info">{{news_author}}</text>
+          <text class="post-info post-date">{{news_time == date ? "今天" : news_time}}</text>
+        </view>
+          <text class="post-title">{{news_title}}</text>
+          <text class="post-brief">{{news_brief}}</text>
+        <view class="post-option">
+          <image class="post-option-image" src="/images/post_options/view-ok.png"></image>
+          <text class="post-option-word">{{news_view}}</text>
+        
+          <image class="post-option-image" src="/images/post_options/collect-ok.png" wx:if="{{news_subscription}}" catchtap="onCollectTap" data-id="{{news_id}}"></image>
+          <image class="post-option-image" src="/images/post_options/collect.png" wx:else catchtap="onCollectTap" data-id="{{news_id}}"></image>
+          <text class="post-option-word" wx:if="{{news_subscription}}" catchtap="onCollectTap" data-id="{{news_id}}">已收藏</text>
+          <text class="post-option-word" wx:else catchtap="onCollectTap" data-id="{{news_id}}">收藏</text>
+        </view>
+      </view>
+</template>

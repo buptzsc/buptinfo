@@ -1,0 +1,14 @@
+<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/cjkz2329.jpg" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">关于</view></cu-custom>
+
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+  <view class='text-center margin-bottom text-lg  text-grey'>关于这个小程序</view>
+  <view class='text-content'>
+    <view>欢迎各位使用邮筒小程序！</view>
+    <view class='margin-top-sm'>本小程序希望能够帮助大家更好地获悉自己感兴趣的校园通知/bbs帖子，并且能够实现搜索、收藏等功能</view>
+    <view class='margin-top-sm'>还有更多小功能等大家发现！</view>
+    <view class='margin-top-sm'>在小程序制作过程中，我们使用了ColorUI、wxParse、mp-html组件库，大部分图标取自icons8.com，参考了贝壳小盒子等github项目，在此提出感谢~</view>
+    <view class='margin-top-sm'>同时感谢所有为该项目技术问题提供帮助的人！</view>
+    <view class='margin-top-sm'>我们会至少保留该项目一段时间供大家使用！</view>
+    <view class='margin-top-sm'>版本：v1.0 BETA</view>
+  </view>
+</view>

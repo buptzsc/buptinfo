@@ -1,0 +1,13 @@
+<import src="../../templates/post-item/post-item.wxml" />
+<cu-custom bgColor="bg-green" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">查询结果</view></cu-custom>
+<view class="cu-bar bg-white">
+  <view class="action">
+    <text class="cuIcon-infofill text-green"></text>
+    <text>找到搜索结果{{total}}条(最大显示条数为20条)</text>
+  </view>
+</view>
+<block wx:for="{{posts}}" wx:for-item="item" wx:for-index="idx">
+  <view catchtap="onPostTap" data-URL="{{item.news_url}}" data-news_html="{{item.news_html}}" data-id="{{item.news_id}}">
+    <template is="postItem" data="{{...item,date:date}}"/>
+  </view>
+</block>

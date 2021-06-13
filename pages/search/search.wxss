@@ -1,0 +1,12 @@
+.presearch{
+  display: flex;
+  flex-direction: column;
+  padding-top: 200rpx;
+  justify-content: center;
+  align-items: center;
+}
+
+.presearch image{
+  /* padding-top: 120rpx; */
+  width: 750rpx;
+}

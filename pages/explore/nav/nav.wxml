@@ -1,0 +1,30 @@
+<cu-custom bgColor="bg-green" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">校园导航</view></cu-custom>
+<!--pages/traffic/navi.wxml-->
+
+<view class="container">
+  <view>
+    <view class="map_box">
+      <map id="navi_map" longitude="{{userLongitude}}" latitude="{{userLatitude}}" scale="18" markers="{{markers}}"
+        polyline="{{polyline}}" bindmarkertap="makertap" style='width:100%' show-location
+        subkey="ZCLBZ-CKE33-I4V3C-3BBKQ-HADG2-36BEM" enable-3D="true" show-compass>
+        <cover-view class="controls {{fullscreen ? 'full' : ''}}">
+          <cover-view bindtap="showStaticMapImage">
+            <cover-image class="img" src="/images/navi/mappic.png" />
+          </cover-view>
+          <cover-view bindtap="moveToSchool">
+            <cover-image class="img" src="/images/navi/navi.png" />
+          </cover-view>
+          <cover-view bindtap="myLocation">
+            <cover-image class="img" src="/images/navi/location.png" />
+          </cover-view>
+        </cover-view>
+      </map>
+    </view>
+    <view class="text_box">
+      <view class="text" bindtap="moveSchool">北京邮电大学沙河校区
+        <view class="cu-tag bg-blue" bindtap="moveToSchool">前往</view>
+      </view>
+      <view class="text" bindtap="copyText" data-text="{{schoolAddressText}}">{{schoolAddressText}}</view>
+    </view>
+  </view>
+</view>

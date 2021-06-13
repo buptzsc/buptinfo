@@ -1,0 +1,2 @@
+<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/wdh2236.jpg" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">详情</view></cu-custom>
+<mp-html content="{{article}}"/>

@@ -1,0 +1,70 @@
+<import src="../templates/post-item/post-item.wxml" />
+<!-- <cu-custom bgColor="bg-wegreen">
+  <view slot="content">我订阅的内容</view>
+</cu-custom> -->
+
+<view class="cu-load {{isLoading?'loading':'over'}}" wx:if="{{isLoading&&TabCur!=2&&isLoggedIn}}"></view>
+
+<scroll-view scroll-x class="bg-white nav">
+  <view class="flex text-center">
+    <view class="cu-item flex-sub {{index==TabCur?'text-green cur':''}}" wx:for="{{TabName}}" wx:key bindtap="tabSelect" data-id="{{index}}">
+      {{item.name}}
+    </view>
+  </view>
+</scroll-view>
+
+<view class="cu-bar bg-white" wx:if="{{TabCur==0||TabCur==1}}">
+  <view class="action">
+    <text class="cuIcon-infofill text-green"></text>
+    <text wx:if="{{!isLoggedIn&&TabCur==0}}">你好，请先登录再查看信息门户</text>
+    <text wx:else>在我的-订阅管理处可以管理您的订阅内容</text>
+  </view>
+</view>
+
+<view wx:if="{{TabCur==0}}">
+<block wx:for="{{posts}}" wx:for-item="item" wx:for-index="idx">
+<view catchtap="onPostTap" data-URL="{{item.news_url}}" data-news_html="{{item.news_html}}" data-id="{{item.news_id}}">
+  <template is="postItem" data="{{...item,date:date}}"/>
+</view>
+</block>
+<view class="cu-load {{!thatsall?'loading':'over'}}" wx:if="{{isBottom&&TabCur==0}}"></view>
+</view>
+
+<view wx:if="{{TabCur==1}}">
+  <view wx:if="{{top10}}">
+  <view class="cu-bar bg-white solid-bottom">
+    <view class="action">
+      <text class="cuIcon-title text-wegreen"></text>今日十大
+    </view>
+  </view>
+  <view class="bg-white padding-lr">
+    <view class="solids-bottom padding-xs flex align-center" wx:for="{{top10posts}}" wx:for-item="item" wx:for-index="idx" wx:key="key">
+        <view class="padding {{idx<3?'tored':'toblack'}}" style="font-size:50rpx;">{{idx+1}}</view>
+      <view class="flex-sub text-center" catchtap="todetail" data-rss="{{item.rss}}">
+        <view class="solid-bottom text-df padding">
+          <text class="text-gray" catchtap="copyurl" data-URL="{{item.url}}">{{item.url}}</text>
+        </view>
+        <view class="padding">{{item.title}}</view>
+      </view>
+    </view>
+  </view>
+  </view>
+  <view wx:if="{{kaoyan}}">
+  <view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="action">
+      <text class="cuIcon-title text-wegreen"></text>考研专版
+    </view>
+  </view>
+  <view class="bg-white padding-lr">
+    <view class="solids-bottom padding-xs flex align-center" wx:for="{{kaoyanposts}}" wx:for-item="item" wx:for-index="idx" wx:key="key">
+      <view class="flex-sub text-center" catchtap="todetail" data-rss="{{item.rss}}">
+        <view class="solid-bottom text-df padding">
+          <text class="text-gray" catchtap="copyurl" data-URL="{{item.url}}">{{item.url}}</text>
+        </view>
+        <view class="padding">{{item.title}}</view>
+      </view>
+    </view>
+    </view>
+  </view>
+</view>
+

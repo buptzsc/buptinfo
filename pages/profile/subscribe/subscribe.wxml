@@ -1,0 +1,104 @@
+<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/cjkz2329.jpg" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">订阅</view></cu-custom>
+
+<view class="cu-bar bg-white">
+  <view class="action">
+    <text class="cuIcon-infofill text-green"></text>
+    <text>在这里，您可以管理您接收到的消息来源</text>
+  </view>
+</view>
+
+<view wx:if="{{isLoggedIn}}">
+
+<view class="cu-bar bg-white margin-top">
+  <view class="action">
+    <text class="cuIcon-title text-green"></text>
+    <text>信息门户</text>
+  </view>
+</view>
+
+  <view class="cu-form-group" wx:for="{{subscribeItem}}" wx:key="key" wx:for-item="item" wx:for-index="idx">
+    <view class="title">{{item.name}}</view>
+    <switch class="sm" checked="{{item.ischecked}}" data-idx="{{idx}}" bindchange="switchchange"></switch>
+  </view>
+
+</view>
+
+<!-- <view>
+  <view class="cu-form-group">
+		  <view class="title">全部</view>
+	  	<switch class="sm" checked></switch>
+  </view>
+  <view class="cu-form-group">
+		  <view class="title">奖项/奖学金</view>
+	  	<switch class="sm" checked></switch>
+  </view>
+  <view class="cu-form-group">
+		  <view class="title">报销</view>
+	  	<switch class="sm" checked></switch>
+  </view>
+  <view class="cu-form-group">
+		  <view class="title">叶培大</view>
+	  	<switch class="sm" checked></switch>
+  </view>
+  <view class="cu-form-group">
+		  <view class="title">雏雁计划</view>
+	  	<switch class="sm" checked></switch>
+  </view>
+  <view class="cu-form-group">
+		  <view class="title">考试通知</view>
+	  	<switch class="sm" checked></switch>
+  </view>
+  <view class="cu-form-group">
+		  <view class="title">研究生院</view>
+	  	<switch class="sm" checked></switch>
+  </view>
+  <view class="cu-form-group">
+		  <view class="title">竞赛</view>
+	  	<switch class="sm" checked></switch>
+  </view>
+  <view class="cu-form-group">
+		  <view class="title">教务处</view>
+	  	<switch class="sm" checked></switch>
+  </view>
+  <view class="cu-form-group">
+		  <view class="title">图书馆</view>
+	  	<switch class="sm" checked></switch>
+  </view>
+  <view class="cu-form-group">
+		  <view class="title">马院</view>
+	  	<switch class="sm" checked></switch>
+  </view>
+  <view class="cu-form-group">
+		  <view class="title">党政办公室</view>
+	  	<switch class="sm" checked></switch>
+  </view>
+  <view class="cu-form-group">
+		  <view class="title">学生处</view>
+	  	<switch class="sm" checked></switch>
+  </view>
+  <view class="cu-form-group">
+		  <view class="title">信息化技术中心</view>
+	  	<switch class="sm" checked></switch>
+  </view>
+  <view class="cu-form-group">
+		  <view class="title">创新创业</view>
+	  	<switch class="sm" checked></switch>
+  </view>
+</view> -->
+
+  <view class="cu-bar bg-white margin-top">
+  <view class="action">
+    <text class="cuIcon-title text-green"></text>
+    <text>北邮人论坛</text>
+  </view>
+</view>
+
+  <view class="cu-form-group">
+		  <view class="title">今日十大</view>
+	  	<switch class="sm" checked="{{top10?'1':''}}" bindchange="bbschange" data-name="top10"></switch>
+  </view>
+
+    <view class="cu-form-group">
+		  <view class="title">考研专版</view>
+	  	<switch class="sm" checked="{{kaoyan?'1':''}}" bindchange="bbschange" data-name="kaoyan"></switch>
+  </view>

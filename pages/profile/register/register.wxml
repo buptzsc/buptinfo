@@ -1,0 +1,63 @@
+<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/cjkz2329.jpg" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">{{mode=='register'?'注册':'修改密码'}}</view>
+</cu-custom>
+
+<view wx:if="{{mode=='register'}}">
+<form>
+	<view class="cu-form-group margin-top">
+		<view class="title">姓名</view>
+		<input placeholder="请输入您的姓名" bindinput="nameInput"></input>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">学号</view>
+		<input placeholder="请输入您的学号" bindinput="uidInput"></input>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">班级</view>
+		<input placeholder="请输入您的班级" bindinput="classInput"></input>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">设置密码</view>
+		<input password="true" placeholder="至少8位，且必须包含数字和字母" bindinput="passwdInput"></input>
+  </view>
+  <view class="cu-form-group">
+		<view class="title">确认密码</view>
+		<input password="true" placeholder="请再输一次" bindinput="repeatPasswdInput"></input>
+  </view>
+</form>
+</view>
+
+<view wx:else>
+<form>
+	<view class="cu-form-group">
+		<view class="title">学号</view>
+		<input placeholder="请输入您的学号" bindinput="uidInput"></input>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">旧密码</view>
+		<input password="true" placeholder="请输入您的旧密码" bindinput="oldPasswdInput"></input>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">设置新密码</view>
+		<input password="true" placeholder="至少8位，且必须包含数字和字母" bindinput="newPasswdInput"></input>
+  </view>
+  <view class="cu-form-group">
+		<view class="title">确认新密码</view>
+		<input password="true" placeholder="请再输一次" bindinput="repeatNewPasswdInput"></input>
+  </view>
+</form>
+</view>
+
+<view class="padding flex flex-direction" wx:if="{{mode=='register'}}">
+  <button class="cu-btn bg-green lg" bindtap="bind">
+  <text>注册</text>
+</button>
+</view>
+
+<view class="padding flex flex-direction" wx:else>
+  <button class="cu-btn bg-green lg" bindtap="bind">
+  <text>确认修改密码</text>
+</button>
+</view>
+

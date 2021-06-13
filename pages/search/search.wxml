@@ -1,0 +1,14 @@
+<cu-custom bgColor="bg-gradual-blue"><view slot="content">搜索</view></cu-custom>
+<view class="cu-bar bg-white search fixed" style="top:{{CustomBar}}px">
+  <view class="search-form round">
+    <text class="cuIcon-search"></text>
+    <input type="text" placeholder="搜索信息门户通知" confirm-type="search" bindinput="searchInfo"></input>
+  </view>
+  <button class="cu-btn round bg-cyan" style="width:200rpx;margin-right:20rpx" bindtap="gosearch">搜索</button>
+</view>
+
+<view class="presearch">
+  <text class="cloudtext">近期通知词云</text>
+  <view class="wordcloud"><image src="https://bupt.psmoe.com/wordcloud.jpg" mode="aspectFit"></image></view>
+
+</view>

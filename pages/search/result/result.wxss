@@ -1,0 +1,2 @@
+/* pages/search/result/result.wxss */
+@import "../../templates/post-item/post-item.wxss";

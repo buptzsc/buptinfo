@@ -1,0 +1,30 @@
+<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/cjkz2329.jpg" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">登录</view></cu-custom>
+
+<view class="container">
+  <block>
+    <view class="content-login">
+      <view class="bd">
+        <form class="login-form">
+          <view class="input-group {{userid_focus ? 'active' : ''}}">
+            <text class="input-label">学号</text>
+            <input type="number" cursor-spacing="30" id="userid" maxlength="10" placeholder="10位学号" bindinput="useridInput" bindfocus="inputFocus" bindblur="inputBlur" confirm-type="next" />
+          </view>
+          <view class="input-group {{passwd_focus ? 'active' : ''}}">
+            <text class="input-label">密码</text>
+            <input password="true" cursor-spacing="30" id="passwd" placeholder="在此处输入密码" bindinput="passwdInput"
+              bindfocus="inputFocus" bindblur="inputBlur" confirm-type="next" />
+          </view>
+          <view class="login-help">
+            <view>
+              <text class="cuIcon-people line-blue light"></text>
+              <text class="line-blue light" bindtap="navToReg">注册</text>
+            </view>
+          </view>
+        </form>
+        <button class="cu-btn bg-green lg" bindtap="bind">
+          <text>登录</text>
+        </button>
+      </view>
+    </view>
+  </block>
+  </view>

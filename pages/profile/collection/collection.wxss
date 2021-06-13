@@ -1,0 +1,25 @@
+@import "../../templates/post-item/post-item.wxss";
+
+.btn-container{
+  flex-direction:row;
+  flex-wrap: wrap;
+  display:flex;
+  margin-top:5rpx;
+  margin-bottom:5rpx;
+  margin-left: 0rpx;
+}
+
+.btn-style{
+  margin-left: 5rpx;
+  margin-right: 5rpx;
+  margin-top: 5rpx;
+  margin-bottom: 5rpx;
+}
+
+.tored{
+  color: red;
+}
+
+.toblack{
+  color: black;
+}
